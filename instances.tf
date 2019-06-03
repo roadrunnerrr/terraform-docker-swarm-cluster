@@ -5,7 +5,7 @@ resource "aws_instance" "vm_docker_master" {
   vpc_security_group_ids = ["${aws_security_group.vm_docker_swarm_SG.id}"]
   subnet_id = "${aws_subnet.vm_subnet.id}"
   associate_public_ip_address = true
-  key_name = "vladimir_marchuk_key"
+  key_name = "${var.key_name}"
 
   tags = {
     Name = "VladimirMarchuk/master"
@@ -19,8 +19,7 @@ resource "aws_instance" "vm_docker_worker" {
   vpc_security_group_ids = ["${aws_security_group.vm_docker_swarm_SG.id}"]
   subnet_id = "${aws_subnet.vm_subnet.id}"
   associate_public_ip_address = true
-  key_name = "vladimir_marchuk_key"  
-
+  key_name = "${var.key_name}"
   tags = {
     Name = "VladimirMarchuk/worker"
   }

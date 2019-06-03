@@ -1,5 +1,5 @@
 variable "region" {
-  default = "eu-west-1"
+  default = "us-east-1"
 }
 
 variable "access_key" {
@@ -10,7 +10,7 @@ variable "secret_key" {
 
 variable "ami" {
   description = "Amazon Linux AMI"
-  default = "ami-03c242f4af81b2365"
+  default = "ami-0756fbca465a59a30"
 }
 
 variable "instance_type" {
@@ -21,5 +21,9 @@ variable "instance_type" {
 variable "bootstrap_path" {
   description = "Script to install Docker Engine"
   default = "install-docker.sh"
+}
+
+variable "key_name" {
+  default = "ec2key"
 }
 
