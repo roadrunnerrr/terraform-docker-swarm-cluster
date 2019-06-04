@@ -1,16 +1,10 @@
 variable "region" {
-  default = "us-east-1"
-}
-
-variable "access_key" {
-}
-
-variable "secret_key" {
+  default = "eu-west-1"
 }
 
 variable "ami" {
   description = "Amazon Linux AMI"
-  default = "ami-0756fbca465a59a30"
+  default = "ami-03c242f4af81b2365"
 }
 
 variable "instance_type" {
@@ -24,6 +18,6 @@ variable "bootstrap_path" {
 }
 
 variable "key_name" {
-  default = "ec2key"
+  default = "vladimir_marchuk_key"
 }
 

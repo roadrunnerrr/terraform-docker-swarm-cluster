@@ -7,7 +7,7 @@
 terraform.tfvars
 terraform.tfstate.backup
 terraform.tfstate
-
+.insta.swp
 # Crash log files
 crash.log
 

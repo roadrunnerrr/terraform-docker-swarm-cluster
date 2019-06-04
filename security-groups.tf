@@ -1,7 +1,6 @@
 resource "aws_security_group" "vm_docker_swarm_SG" {
   name = "vm_docker_swarm_SG"
   description = "Security group for docker swarm cluster"
-  vpc_id = "${aws_vpc.vm_vpc.id}"
 
   # Allow all inbound TCP
   ingress {

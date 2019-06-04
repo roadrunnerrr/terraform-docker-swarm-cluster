@@ -1,5 +1,7 @@
 ---
 - hosts: masters
+  user: ec2-user
+  gather_facts: no
   tasks:
   - name: Swarm init
     shell: docker swarm init --advertise-addr {{ inventory_hostname }}
@@ -12,6 +14,8 @@
       var: worker_token
 
 - hosts: workers
+  user: ec2-user
+  gather_facts: no
   vars:
     token: "{{ hostvars[groups['masters'][0]]['worker_token']['stdout'] }}"
     master: "{{ hostvars[groups['masters'][0]]['inventory_hostname'] }}"
